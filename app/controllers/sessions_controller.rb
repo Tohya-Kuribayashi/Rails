@@ -28,4 +28,11 @@ class SessionsController < ApplicationController
     @current_user = nil
   end
   
+  def email_params
+    params.require(:sessions).permit(:email)
+  end
+  
+  def password_params
+    params.require(:sessions).permit(:password)
+  end
 end
