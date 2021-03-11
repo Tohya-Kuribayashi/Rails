@@ -33,6 +33,6 @@ class SessionsController < ApplicationController
   end
   
   def password_params
-    params.require(:sessions).permit(:password)
+    params.require(:sessions).permit(:passwordgi)
   end
 end
