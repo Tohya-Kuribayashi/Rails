@@ -29,10 +29,10 @@ class SessionsController < ApplicationController
   end
   
   def email_params
-    params.require(:sessions).permit(:email)
+    params.require(:session).permit(:email)
   end
   
   def password_params
-    params.require(:sessions).permit(:passwordgi)
+    params.require(:session).permit(:password)
   end
 end
