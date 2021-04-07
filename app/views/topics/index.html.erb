@@ -17,10 +17,14 @@
                   <%= image_tag 'icons/heart-black.png', class: 'topic-index-icon' %><%= topic.favorites.count %>
                 <% end %>
               <% end %>
-            <%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+              <%= link_to comments_new_path(topic_id: topic.id), method: :get do %>
+            　　<%= image_tag 'icons/comment.png', class: 'topic-index-icon' %>
+            　<% end %>
             <p class="topic-text">
               <%= topic.description %>
             </p>
+            <p class="text-black">コメント</p>
+            
           </div>
         </div>
       </div>
